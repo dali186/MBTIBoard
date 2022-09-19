@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Index Page</title>
+    <title>얼음땡</title>
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/SiteStyle.css">
 </head>
+
 <body>
-    <h2>Index Page</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="https://cdn-icons-png.flaticon.com/512/1553/1553291.png" height="30px">
+        <a id="navbar-brand" class="navbar-brand" href="#">얼음땡</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0" id="dropmenu">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page"  id="current">게시판1</a>
+                    <ul id="list1">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">아무게시판</a></li>
+                        <li><a href="#">이런게시판</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">게시판2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">게시판3</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">내 정보</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">로그인</a>
+                </li>
+
+            </ul>
+
+        </div>
+</nav>
+<div id="asdf">
+    <form id="searchmenu" class="d-flex" role="search">
+        <input id="searchbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="searchbutton" class="btn btn-outline-success" type="submit">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" height="18px">
+        </button>
+    </form>
+</div>
+
 </body>
 </html>

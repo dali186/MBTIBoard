@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Login Page</title>
+  <title>로그인</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
 </head>
 <body>
-<h1>Login Page</h1>
 <form th:action="@{/login}" method="post">
-  <input type="email" name="username" placeholder="username"> <br>
-  <input type="password" name="password" placeholder="password"> <br>
-  <button>Login</button>
+  <div class="login-form">
+    <div id="main">
+      <img src="https://cdn-icons-png.flaticon.com/512/1553/1553291.png" height="30px">
+      <a id="navbar-brand" class="navbar-brand" href="index.html">얼음땡</a>
+    </div>
+    <form>
+      <input type="text" name="username" class="text-field" placeholder="이메일"><br>
+      <input type="password" name="password" class="text-field" placeholder="비밀번호"><br>
+      <input type="submit" value="로그인" class="submit-btn">
+    </form>
+
+    <div class="links">
+      <a th:href="@{/joinForm}">회원가입</a>
+      <a href="#">아이디 찾기</a>
+      <a href="#">비밀번호 찾기</a>
+    </div>
+  </div>
 </form>
-<a href="/joinForm">회원가입을 아직 하지 않으셨나요?</a>
 </body>
 </html>

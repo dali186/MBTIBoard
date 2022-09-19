@@ -3,6 +3,8 @@ package com.example.mbtiboard.controller;
 import com.example.mbtiboard.dto.AccountDTO;
 import com.example.mbtiboard.service.AccountService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,17 +23,17 @@ public class IndexController {
     }
 
     @GetMapping("/user")
-    public String user() {
+    public @ResponseBody String user() {
         return "user";
     }
 
     @GetMapping("/manager")
-    public String manager() {
+    public @ResponseBody String manager() {
         return "manager";
     }
 
     @GetMapping("/admin")
-    public String admin() {
+    public@ResponseBody  String admin() {
         return "admin";
     }
 
@@ -57,4 +59,11 @@ public class IndexController {
         return "redirect:/loginForm";
 
     }
+    @Secured("ROLE_ADMIN")  //EnableGlobalMethodSecurity와 함께 특정 메소드에만 적용시키기
+    @GetMapping("/info")
+    public @ResponseBody String info() {
+        return "개인정보";
+    }
+
+
 }

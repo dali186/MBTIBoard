@@ -7,18 +7,28 @@ package com.example.mbtiboard.config.auth;
 //Security Session -> Authentication -> Account(User)Details(principaldetails)
 
 import com.example.mbtiboard.entity.Account;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
-public class PrincipalDetails implements UserDetails {
+@Data
+public class PrincipalDetails implements UserDetails, OAuth2User {
 
     private Account account; //컴포지션
-
+    private Map<String, Object> attributes;
+    //일반 로그인
     public PrincipalDetails(Account account) {
         this.account = account;
+    }
+    //OAuth 로그인
+    public PrincipalDetails(Account account, Map<String, Object>attributes) {
+        this.account = account;
+        this.attributes = attributes;
     }
 
     //해당 account의 권한을 리턴
@@ -67,5 +77,14 @@ public class PrincipalDetails implements UserDetails {
         //account.getlogindate();
 
         return true;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return attributes;
+    }
+    @Override
+    public String getName() {
+        return null;
     }
 }

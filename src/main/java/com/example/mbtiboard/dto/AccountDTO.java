@@ -6,17 +6,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.persistence.Column;
+
 @Data
 @NoArgsConstructor
 public class AccountDTO {
 
     private Long userNo;
+
+    @Column(name = "user_email")
     private String userEmail;
+    @Column(name = "user_passwd")
     private String userPasswd;
+    @Column(name = "user_name")
     private String userName;
+    @Column(name = "user_birth")
     private String userBirth;
+    @Column(name = "user_gender")
     private String userGender;
+    @Column(name = "user_phone")
     private String userPhone;
+    @Column(name = "user_role")
     private String userRole;
 
     @Builder

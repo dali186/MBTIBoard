@@ -9,28 +9,28 @@
 <form th:action="@{/joinForm}" th:object="${accountDTO}" method="post">
   <div class="form-group">
     <label th:for="user_email">이메일</label>
-    <input type="email" th:field="*{user_email}" class="form-control" placeholder="이메일을 입력해주세요">
+    <input type="email" th:field="*{userEmail}" class="form-control" placeholder="이메일을 입력해주세요">
   </div>
   <div class="form-group">
     <label th:for="user_passwd">비밀번호</label>
-    <input type="password" th:field="*{user_passwd}" class="form-control">
+    <input type="password" th:field="*{userPasswd}" class="form-control">
   </div>
   <div class="form-group">
     <label th:for="user_name">이름</label>
-    <input type="text" th:field="*{user_name}" class="form-control" placeholder="이름을 입력해주세요">
+    <input type="text" th:field="*{userName}" class="form-control" placeholder="이름을 입력해주세요">
   </div>
   <div class="form-group">
     <label th:for="user_birth">생년월일</label>
-    <input type="number" th:field="*{user_birth}" class="form-control" placeholder="생년월일을 입력해주세요">
+    <input type="number" th:field="*{userBirth}" class="form-control" placeholder="생년월일을 입력해주세요">
   </div>
   <div class="form-group">
     <label th:for="user_gender">성별</label>
-    남 <input type="radio" th:field="*{user_gender}" th:value="man" class="form-control">
-    여 <input type="radio" th:field="*{user_gender}" th:value="woman" class="form-control">
+    남 <input type="radio" th:field="*{userGender}" th:value="man" class="form-control">
+    여 <input type="radio" th:field="*{userGender}" th:value="woman" class="form-control">
   </div>
   <div class="form-group">
     <label th:for="user_phone">핸드폰 번호</label>
-    <input type="number" th:field="*{user_phone}" class="form-control" placeholder="휴대폰번호를 입력해주세요">
+    <input type="number" th:field="*{userPhone}" class="form-control" placeholder="휴대폰번호를 입력해주세요">
   </div>
   <button type="submit" class="btn-primary">Submit</button>
 </form>

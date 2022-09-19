@@ -16,27 +16,27 @@ public class Account {
     @Id
     @Column(name = "user_account")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_no;
-    private String user_email;
-    private String user_passwd;
-    private String user_name;
-    private String user_birth;
-    private String user_gender;
-    private String user_phone;
-    private String user_role;
+    private Long userNo;
+    private String userEmail;
+    private String userPasswd;
+    private String userName;
+    private String userBirth;
+    private String userGender;
+    private String userPhone;
+    private String userRole;
     @CreationTimestamp
     private Timestamp createDate;
 
     @Builder
-    public Account(Long user_no, String user_email, String user_passwd, String user_name, String user_birth, String user_gender, String user_phone, String user_role) {
-        this.user_no = user_no;
-        this.user_email = user_email;
-        this.user_passwd = user_passwd;
-        this.user_name = user_name;
-        this.user_birth = user_birth;
-        this.user_gender = user_gender;
-        this.user_phone = user_phone;
-        this.user_role = user_role;
+    public Account(Long userNo, String userEmail, String userPasswd, String userName, String userBirth, String userGender, String userPhone, String userRole) {
+        this.userNo = userNo;
+        this.userEmail = userEmail;
+        this.userPasswd = userPasswd;
+        this.userName = userName;
+        this.userBirth = userBirth;
+        this.userGender = userGender;
+        this.userPhone = userPhone;
+        this.userRole = userRole;
     }
 }
 

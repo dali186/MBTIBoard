@@ -17,9 +17,9 @@ public class AccountService {
     @Transactional
     public Long createAccount(AccountDTO accountDTO) {
         Account account = accountDTO.toEntity();
-        account.setUser_role("USER");   //user로 등록
+        account.setUserRole("ROLE_USER");   //user로 등록
         accountRepository.save(account);
 
-        return account.getUser_no();
+        return account.getUserNo();
     }
 }

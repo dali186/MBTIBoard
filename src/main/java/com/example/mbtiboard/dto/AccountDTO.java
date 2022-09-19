@@ -10,37 +10,37 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @NoArgsConstructor
 public class AccountDTO {
 
-    private Long user_no;
-    private String user_email;
-    private String user_passwd;
-    private String user_name;
-    private String user_birth;
-    private String user_gender;
-    private String user_phone;
-    private String user_role;
+    private Long userNo;
+    private String userEmail;
+    private String userPasswd;
+    private String userName;
+    private String userBirth;
+    private String userGender;
+    private String userPhone;
+    private String userRole;
 
     @Builder
-    public AccountDTO(Long user_no, String user_email, String user_passwd, String user_name, String user_birth, String user_gender, String user_phone, String user_role) {
-        this.user_no = user_no;
-        this.user_email = user_email;
-        this.user_passwd = user_passwd;
-        this.user_name = user_name;
-        this.user_birth = user_birth;
-        this.user_gender = user_gender;
-        this.user_phone = user_phone;
-        this.user_role = user_role;
+    public AccountDTO(Long userNo, String userEmail, String userPasswd, String userName, String userBirth, String userGender, String userPhone, String userRole) {
+        this.userNo = userNo;
+        this.userEmail = userEmail;
+        this.userPasswd = userPasswd;
+        this.userName = userName;
+        this.userBirth = userBirth;
+        this.userGender = userGender;
+        this.userPhone = userPhone;
+        this.userRole = userRole;
     }
 
     public Account toEntity() {
         return Account.builder()
-                .user_no(user_no)
-                .user_email(user_email)
-                .user_passwd(new BCryptPasswordEncoder().encode(user_passwd))
-                .user_name(user_name)
-                .user_birth(user_birth)
-                .user_gender(user_gender)
-                .user_phone(user_phone)
-                .user_role(user_role)
+                .userNo(userNo)
+                .userEmail(userEmail)
+                .userPasswd(new BCryptPasswordEncoder().encode(userPasswd))
+                .userName(userName)
+                .userBirth(userBirth)
+                .userGender(userGender)
+                .userPhone(userPhone)
+                .userRole(userRole)
                 .build();
     }
 }

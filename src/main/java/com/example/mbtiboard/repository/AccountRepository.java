@@ -9,6 +9,6 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
 
     //규칙 findBy테이블이름    (qeury Method)
     //select * from account where 이메일
-    public Account findByUserEmail(String userEmail);
+    public Account findByUserEmail(String username);
 }
 

@@ -1,4 +1,4 @@
-package com.example.mbtiboard.config.oauth.provider;
+package com.example.mbtiboard.account.config.oauth.provider;
 
 import java.util.Map;
 

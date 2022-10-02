@@ -1,6 +1,6 @@
-package com.example.mbtiboard.config;
+package com.example.mbtiboard.account.config;
 
-import com.example.mbtiboard.config.oauth.PrincipalOauth2UserService;
+import com.example.mbtiboard.account.config.oauth.PrincipalOauth2UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

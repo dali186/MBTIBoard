@@ -1,4 +1,4 @@
-package com.example.mbtiboard.entity;
+package com.example.mbtiboard.account.entity;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

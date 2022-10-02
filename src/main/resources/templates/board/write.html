@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Post Page</title>
+</head>
+<body>
+<h2>Create Your Post</h2>
+<form th:action="@{/board/write/action}" th:object="${boardRequestDTO}" method="post">
+    <table>
+        <tr>
+            <td><label th:for="board_title">Title</label></td>
+            <td><input type="text" th:field="*{boardTitle}" placeholder="Type your Title"></td>
+        </tr>
+        <tr>
+            <td><label th:for="board_content">Content</label></td>
+            <td><input type="text" th:field="*{boardContent}" placeholder="Type your Content"></td>
+        </tr>
+    </table>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,11 +1,11 @@
-package com.example.mbtiboard.config.oauth;
+package com.example.mbtiboard.account.config.oauth;
 
-import com.example.mbtiboard.config.auth.PrincipalDetails;
-import com.example.mbtiboard.config.oauth.provider.FacebookUserInfo;
-import com.example.mbtiboard.config.oauth.provider.GoogleUserInfo;
-import com.example.mbtiboard.config.oauth.provider.OAuth2UserInfo;
-import com.example.mbtiboard.entity.Account;
-import com.example.mbtiboard.repository.AccountRepository;
+import com.example.mbtiboard.account.config.auth.PrincipalDetails;
+import com.example.mbtiboard.account.config.oauth.provider.FacebookUserInfo;
+import com.example.mbtiboard.account.config.oauth.provider.GoogleUserInfo;
+import com.example.mbtiboard.account.config.oauth.provider.OAuth2UserInfo;
+import com.example.mbtiboard.account.entity.Account;
+import com.example.mbtiboard.account.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;

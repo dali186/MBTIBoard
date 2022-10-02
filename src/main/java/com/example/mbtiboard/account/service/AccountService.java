@@ -1,8 +1,8 @@
-package com.example.mbtiboard.service;
+package com.example.mbtiboard.account.service;
 
-import com.example.mbtiboard.dto.AccountDTO;
-import com.example.mbtiboard.entity.Account;
-import com.example.mbtiboard.repository.AccountRepository;
+import com.example.mbtiboard.account.repository.AccountRepository;
+import com.example.mbtiboard.account.dto.AccountDTO;
+import com.example.mbtiboard.account.entity.Account;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

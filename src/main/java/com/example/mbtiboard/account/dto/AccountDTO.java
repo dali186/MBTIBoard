@@ -1,6 +1,6 @@
-package com.example.mbtiboard.dto;
+package com.example.mbtiboard.account.dto;
 
-import com.example.mbtiboard.entity.Account;
+import com.example.mbtiboard.account.entity.Account;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;

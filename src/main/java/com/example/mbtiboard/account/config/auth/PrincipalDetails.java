@@ -1,4 +1,4 @@
-package com.example.mbtiboard.config.auth;
+package com.example.mbtiboard.account.config.auth;
 
 //login 주소를에서 로그인 진행
 //로그인이 되면 세션 생성 (시큐리티 세션) - Security ContextHolder
@@ -6,7 +6,7 @@ package com.example.mbtiboard.config.auth;
 
 //Security Session -> Authentication -> Account(User)Details(principaldetails)
 
-import com.example.mbtiboard.entity.Account;
+import com.example.mbtiboard.account.entity.Account;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,7 +1,7 @@
-package com.example.mbtiboard.config.auth;
+package com.example.mbtiboard.account.config.auth;
 
-import com.example.mbtiboard.entity.Account;
-import com.example.mbtiboard.repository.AccountRepository;
+import com.example.mbtiboard.account.entity.Account;
+import com.example.mbtiboard.account.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

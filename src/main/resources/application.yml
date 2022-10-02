@@ -7,11 +7,16 @@ server:
     context-path: /
 
 spring:
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
   datasource:
     password: tester
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localhost:3306/test
     username: tester
+
 
   jpa:
     hibernate:
@@ -25,8 +30,18 @@ spring:
       client:
         registration:
           google:
-            client-id: 596637222821-3nd5m3h4h8gs4ca2o05cumrsef0ib30f.apps.googleusercontent.com
-            client-secret: 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
+            client-id: .
+            client-secret: .
             scope:
               - email
               - profile
+
+          facebook:
+            client-id: .
+            client-secret: .
+            scope:
+              - email
+              - public_profile
+
+
+

@@ -19,7 +19,6 @@ public class AccountService {
         Account account = accountDTO.toEntity();
         account.setUserRole("ROLE_USER");   //user로 등록
         accountRepository.save(account);
-
         return account.getUserNo();
     }
 }

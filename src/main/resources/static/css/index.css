@@ -1,33 +1,57 @@
 body {
-  margin: 0;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ height: 100%;
 }
 
+li{
+list-style:none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+#body-wrapper{
+  min-height: 100%;
+  position: relative;
+  padding-right:10%;
+  padding-left: 10%;
+}
+#body-content{
+  margin-top: 100px;
+  padding-bottom: 170px;
+}
+footer{
+  width: 100%;
+  height: 170px;
+  bottom: 0;
+  left: 0;
+}
 #dropmenu{
   border: none;
   border: 0px;
-  margin: 0px 100px;
+  margin: 0px;
   padding: 0px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Dongle', sans-serif;
+  font-size:20px;
+  width: 1000px;
+;
 }
 #dropmenu ul{
   height: 100px;
+  width: 0px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 #dropmenu li{
   float: left;
-  padding: 0px 50px;
+  padding: 0px 100px;
+
 }
 #dropmenu li a:hover, .dropmenu ul li:hover a{
 
@@ -50,16 +74,20 @@ code {
   margin: 10px 0px;
   padding: 0px;
   width: 200px;
-
 }
-
+#l1{
+  text-decoration-line:none ;
+}
 #searchbar{
   margin: 0px;
+  width:250px;
+  height:35px;
 }
 
 #searchbutton{
   background-color: #ffffff;
   margin: 0px;
+  height:30px;
 }
 
 #searchmenu{
@@ -67,18 +95,193 @@ code {
   padding-right: 10px;
 }
 
-#asdf{
-  background-color: #F8F9FA;
-  height: 50px;
-}
 
 #list1{
-  background-color: #F8F9FA;
+  background-color: #FFFFFF;
 }
 
 #navbar-brand{
-  padding-left: 8px;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 25px;
+  font-family: 'Dongle', sans-serif;
+  font-size: 30px;
   color: rgb(61, 147, 234);
+  text-decoration-line: none;
+  float: left;
+}
+
+#header{
+ height:100px;
+ width: auto;
+}
+
+#right-menu{
+ float:right;
+ margin: -30px 0px;
+ padding:0px;
+ border: none;
+ width:auto;
+}
+
+#mypage{
+text-decoration-line: none;
+font-size:18px;
+font-family: 'Dongle', sans-serif;
+margin-right:20px;
+}
+
+#login{
+text-decoration-line: none;
+font-size:18px;
+font-family: 'Dongle', sans-serif;
+margin-right:20px;
+}
+
+#logo{
+  margin-top:40px;
+  padding-left:60px;
+  width:auto;
+}
+
+#searchblank{
+height:50px;
+width:100%;
+}
+.carousel-item{
+  height: 400px;
+  background-size: cover;
+  text-align: center;
+}
+.carousel-item.item1 {
+  background-image: url("/img/mbtilogo.png");
+  background-position: left center;
+}
+.carousel-item .item2 {
+ background-image: url("/img/logo.png");
+  background-position: center top;
+}
+
+.carousel-item .item3 {
+ background-image: url(1.png);
+  background-position: center center;
+}
+.helper{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.intro{
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 60px;
+}
+.intro a{
+  background-color: #5900e7;
+  padding: 10px 30px;
+  border-radius: 2px;
+  font-weight: 300;
+  color: white;
+}
+
+#hot-post{
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+}
+
+#hot-list a{
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+}
+
+.left-list{
+  float:left;
+  text-align: left;
+  min-width: 350px;
+  padding-left: 10px;
+  display: block;
+
+}
+
+#qa-post{
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+}
+
+.right-list{
+  float: right;
+  text-align: left;
+  min-width: 350px;
+  padding-left: 10px;
+  display: block;
+}
+
+.hot{
+  width: auto;
+  padding-top: 100px;
+  display:flex;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#hot-list ul{
+  padding: 0px;
+}
+
+.hlist{
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(213, 212, 212);
+  padding:10px
+}
+
+#qa-list ul{
+  padding: 0px;
+}
+
+.qlist{
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(213, 212, 212);
+  padding:10px
+}
+/*footer*/
+#footer{
+  bottom: 0;
+}
+
+.footer-inner{
+  background-color: #222222;
+  height: 70px;
+}
+
+#footer .menu{
+  display: flex;
+  padding-left: 30%;
+  padding-top: 20px;
+  float: left;
+}
+
+#footer .menu a:first-child {
+  padding-left: 0;
+}
+
+#footer .menu a{
+  padding: 0 15px;
+}
+
+#footer .sns{
+  display: flex;
+  padding-right: 30%;
+  padding-top: 10px;
+  float: right;
+}
+
+#footer .info{
+  padding: 50px;
+  background-color: #333333;
+  height: 100px;
+  text-align: center;
+  color:#ffffff;
+  
 }

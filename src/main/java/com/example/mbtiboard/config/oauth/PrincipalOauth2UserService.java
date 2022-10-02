@@ -1,6 +1,9 @@
 package com.example.mbtiboard.config.oauth;
 
 import com.example.mbtiboard.config.auth.PrincipalDetails;
+import com.example.mbtiboard.config.oauth.provider.FacebookUserInfo;
+import com.example.mbtiboard.config.oauth.provider.GoogleUserInfo;
+import com.example.mbtiboard.config.oauth.provider.OAuth2UserInfo;
 import com.example.mbtiboard.entity.Account;
 import com.example.mbtiboard.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +32,20 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
         System.out.println("getAttributes :" + oAuth2User.getAttributes());
 
         //회원가입
-        String provider = userRequest.getClientRegistration().getClientId();    //플랫폼
-        String providerId = oAuth2User.getAttribute("sub"); //providerId
-        String userEmail = oAuth2User.getAttribute("email");
-        String userName = provider + "_" + providerId;
+        OAuth2UserInfo oAuth2UserInfo = null;
+        if(userRequest.getClientRegistration().getRegistrationId().equals("google")) {
+            System.out.println("구글 로그인 요청");
+            oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
+        } else if (userRequest.getClientRegistration().getRegistrationId().equals("facebook")) {
+            System.out.println("페이스북 로그인 요청");
+            oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+        } else {
+
+        }
+        String provider = oAuth2UserInfo.getProvider();    //플랫폼
+        String providerId = oAuth2UserInfo.getProviderId(); //providerId
+        String userEmail = oAuth2UserInfo.getEmail();
+        String userName = oAuth2UserInfo.getName();
         String userPasswd = new BCryptPasswordEncoder().encode("password");
         String userRole = "ROLE_USER";
         String userBirth = "";
@@ -55,9 +68,9 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
                     .providerId(providerId)
                     .build();
             accountRepository.save(accountEntity);
-            System.out.println("최초 구글 로그인");
+            System.out.println("회원가입 완료");
         } else {
-            System.out.println("이미 구글계정으로 회원가입 되어있습니다.");
+            System.out.println("이미 회원가입 되어있습니다.");
         }
 
         return new PrincipalDetails(accountEntity, oAuth2User.getAttributes());
